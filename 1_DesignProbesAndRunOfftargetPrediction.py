@@ -13,7 +13,7 @@ import time
 start_time = time.time()
 reference_database = './REFERENCE/gencode.v29.transcripts.fa'
 threads = '4'
-target_file = 'boloramis_96plex_targets.fasta'
+target_file = 'jenny_02182020.fasta'
 targets = SeqIO.parse(target_file, 'fasta')
 reference_file = SeqIO.parse('{}'.format(reference_database), 'fasta')
 
