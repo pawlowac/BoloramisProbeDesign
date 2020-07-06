@@ -1,0 +1,702 @@
+cggaagaa	bpT9-x
+gccaagaa	bpTNF-x
+ggagagaa	bpPOLR2A-x
+acggagaa	smF-MALAT1-x
+cacgagaa	smF-XIST-x
+ccacagaa	bp-GAPDH-x
+gagcagaa	bp-TFRC-x
+agccagaa	hsa-miR-137
+tcgaggaa	hsa-miR-375
+ctcaggaa	hsa-miR-449a
+ggtaggaa	hsa-miR-219a-1-3p
+tgacggaa	hsa-miR-219a-2-3p
+atgcggaa	hsa-miR-149-5p
+catcggaa	hsa-miR-324-5p
+gcatggaa	hsa-miR-125a-5p
+gtgacgaa	hsa-miR-335-5p
+tgcacgaa	hsa-miR-24-3p
+cctacgaa	hsa-miR-362-3p
+tcagcgaa	hsa-miR-331-3p
+atcgcgaa	hsa-miR-16-5p
+gatgcgaa	CASP1
+cgatcgaa	hsa-miR-423-5p
+ctggtgaa	hsa-miR-99b-5p
+gtcctgaa	hsa-miR-27b-5p
+gtggacaa	hsa-miR-30c-1-3p
+tgcgacaa	hsa-miR-30c-2-3p
+cctgacaa	hsa-miR-30b-5p
+tcgcacaa	hsa-miR-129-1-3p
+ctccacaa	hsa-miR-129-2-3p
+ggtcacaa	hsa-miR-590-5p
+cgaagcaa	hsa-miR-340-5p
+gagagcaa	hsa-miR-26a-5p
+accagcaa	hsa-miR-148a-3p
+agtggcaa	hsa-miR-101-3p
+gtacgcaa	hsa-miR-29a-3p
+taccgcaa	hsa-miR-183-5p
+tggtgcaa	hsa-miR-21-5p
+gcaaccaa	hsa-miR-125b-5p
+aggaccaa	hsa-miR-191-5p
+cacaccaa	hsa-miR-96-5p
+ctagccaa	TNF
+taggccaa	hsa-miR-30a-5p
+tcctccaa	hsa-miR-218-5p
+ccgatcaa	hsa-miR-302a-3p
+ggcatcaa	hsa-miR-302b-3p
+ccaggtaa	hsa-miR-302c-3p
+gacggtaa	hsa-miR-302d-3p
+gctcgtaa	hsa-miR-367-3p
+cgctgtaa	hsa-miR-372-3p
+cgtgctaa	hsa-miR-373-3p
+ggacctaa	hsa-miR-515-5p
+cagcctaa	hsa-miR-200c-3p
+gcgtctaa	hsa-miR-217
+cgagaaga	hsa-miR-371a-3p
+gaggaaga	hsa-miR-371b-3p
+accgaaga	hsa-miR-520g-3p
+gcacaaga	hsa-miR-517a-3p
+aggcaaga	hsa-miR-9-5p
+caccaaga	hsa-miR-885-5p
+ccgtaaga	hsa-miR-219b-3p
+ggctaaga	hsa-miR-551b-3p
+ggaagaga	hsa-miR-301b-3p
+cagagaga	hsa-miR-151a-3p
+tccagaga	hsa-miR-151b
+tgtggaga	hsa-miR-345-5p
+ctacgaga	hsa-miR-15a-5p
+gatcgaga	hsa-miR-128-3p
+gtgtgaga	hsa-miR-25-3p
+ccaacaga	hsa-miR-301a-3p
+tggacaga	hsa-miR-598-3p
+gacacaga	hsa-miR-34a-5p
+gtagcaga	hsa-miR-484
+catgcaga	hsa-miR-107
+actccaga	hsa-miR-374b-5p
+ctctcaga	hsa-miR-103a-3p
+gcgataga	hsa-miR-106b-3p
+cgcataga	hsa-miR-342-5p
+ttggagga	hsa-miR-1246
+agtgagga	hsa-miR-93-5p
+tctcagga	hsa-miR-221-5p
+agaacgga	hsa-miR-135a-5p
+taaccgga	hsa-miR-205-5p
+aagtcgga	hsa-miR-92b-3p
+tgttcgga	hsa-miR-135b-5p
+cgtagaca	CALB1
+gaagtgga	GAD1
+acgaacga	GFAP
+gtcaacga	MBP
+cgtaacga	CD8a
+tcagacga	EGFP
+acagcaca	REST
+agcgtgta	IL6
+tcgactag	IL1B
+ctgcagat	SST
+taacgacc	NIPAL4
+accatgga
+cttctgga
+ccattgga
+gcttacga
+ttgagcga
+ataggcga
+gaatgcga
+tctaccga
+acatccga
+aaggtcga
+ttcgtcga
+caactcga
+agtctcga
+tcgttcga
+ctcgatga
+gtgcatga
+tgccatga
+aggagtga
+cctagtga
+gttggtga
+acacgtga
+tagcgtga
+ctgactga
+ggtactga
+tgagctga
+aacgctga
+gaccttga
+tcggaaca
+gtcgaaca
+ctgcaaca
+acgagaca
+cgtagaca
+gaaggaca
+agacgaca
+ttccgaca
+ccatgaca
+agcacaca
+gctacaca
+tacgcaca
+caaccaca
+tgtccaca
+ggatcaca
+caggtaca
+ggtgtaca
+cctctaca
+gccttaca
+ctagagca
+taccagca
+gttcagca
+cagtagca
+acctagca
+gtaaggca
+aacaggca
+ttgtggca
+gattggca
+tagacgca
+ataccgca
+cgaatgca
+actgtgca
+tcactgca
+aagctgca
+tgcttgca
+tggaacca
+agagacca
+gatgacca
+actcacca
+tcaagcca
+aagtgcca
+gtgatcca
+cttgtcca
+atcctcca
+cacttcca
+gcgaatca
+cgcaatca
+atcggtca
+catggtca
+tcctgtca
+gtcactca
+ttggctca
+gatcctca
+aggtctca
+ccttctca
+gcagttca
+tggcttca
+cacggata
+gctggata
+tggcgata
+ctggcata
+gagccata
+ggcctata
+tccgagta
+cgtcagta
+gcgtagta
+ccaaggta
+gaacggta
+actcggta
+aggtggta
+gtctggta
+acgacgta
+caagcgta
+ttgccgta
+cacctgta
+caggacta
+gaccacta
+cgctacta
+tgcagcta
+cttcgcta
+ggttgcta
+tgtgccta
+gtgtccta
+ggagtcta
+acgctcta
+ggcgatta
+ccgcatta
+gccagtta
+cgacgtta
+gcaagaag
+aggagaag
+cacagaag
+tgaggaag
+atcggaag
+gatggaag
+tagcgaag
+actcgaag
+ctgtgaag
+tcctgaag
+cgaacaag
+gagacaag
+accacaag
+ttggcaag
+agtgcaag
+tcaccaag
+catccaag
+gtctcaag
+ccagtaag
+ggactaag
+ctcctaag
+gcgttaag
+taggagag
+gttgagag
+ttccagag
+aggtagag
+gactagag
+ccttagag
+caatggag
+tgttggag
+attccgag
+acatcgag
+cagatgag
+agcatgag
+gctatgag
+ctgaacag
+tccaacag
+gaagacag
+agacacag
+gttagcag
+aactgcag
+tgtaccag
+atgtccag
+gattccag
+tacgtcag
+actgtcag
+aagctcag
+cgattcag
+ggcaatag
+cgagatag
+accgatag
+gcacatag
+tggcatag
+caccatag
+cgtagtag
+gtaggtag
+tctggtag
+gagtgtag
+ctcactag
+aaggctag
+agctctag
+ggtgttag
+gtgcttag
+cctcttag
+atggaagg
+tacgaagg
+tgacaagg
+gttcaagg
+cgttaagg
+cttagagg
+agatgagg
+ttcacagg
+ataccagg
+gaatcagg
+tcttcagg
+ggtatagg
+ttgctagg
+aacctagg
+cagttagg
+tgcttagg
+tagaacgg
+aatgacgg
+caatacgg
+atctacgg
+ttatgcgg
+attaccgg
+agaatcgg
+catatcgg
+gctaatgg
+tgtgatgg
+ctacatgg
+aagcatgg
+ggatatgg
+tcgtatgg
+tgaagtgg
+aacagtgg
+attcgtgg
+cattgtgg
+acaactgg
+tatcctgg
+gagattgg
+tccattgg
+caagttgg
+atcgttgg
+caagaacg
+actgaacg
+atccaacg
+gcataacg
+tggtaacg
+ttgagacg
+gtaacacg
+aagtcacg
+gacatacg
+agagtacg
+ttcgtacg
+aagaagcg
+tgtaagcg
+attaggcg
+taatcgcg
+acaatgcg
+tatgtgcg
+gtattgcg
+aacttgcg
+ttagaccg
+tatcaccg
+agttaccg
+ctaatccg
+tctatccg
+tagttccg
+cttgatcg
+gtgtatcg
+gatagtcg
+taaggtcg
+acatgtcg
+atgactcg
+tacactcg
+ttacctcg
+tgttctcg
+ggaattcg
+agtcttcg
+ggagaatg
+ctcgaatg
+ccacaatg
+gtcagatg
+acaggatg
+atgcgatg
+ccttgatg
+aacgcatg
+gttgcatg
+cggatatg
+gaggtatg
+gctctatg
+tcgaagtg
+cacaagtg
+gtacagtg
+cgatagtg
+agaaggtg
+tatcggtg
+tcatggtg
+ctaacgtg
+gatacgtg
+atctcgtg
+gtgatgtg
+tgagtgtg
+cttgtgtg
+acgttgtg
+aggaactg
+cctaactg
+ttgcactg
+gagtactg
+attggctg
+tcaacctg
+agatcctg
+tactcctg
+accatctg
+gaactctg
+tgtctctg
+ctgttctg
+agccattg
+gcctattg
+cagagttg
+ttcggttg
+tggtgttg
+gaagcttg
+actgcttg
+cttccttg
+ccatcttg
+gtgagaac
+tgcagaac
+cctagaac
+caaggaac
+aaccgaac
+ggatgaac
+acgtgaac
+ggtacaac
+tctgcaac
+gaaccaac
+atgccaac
+ccatcaac
+tggtcaac
+gccataac
+agcgtaac
+cagctaac
+tgtgagac
+actcagac
+tcgtagac
+ctctagac
+acaaggac
+tactggac
+aagacgac
+ttaccgac
+cattcgac
+ggaatgac
+ttcgtgac
+gatctgac
+gtgttgac
+accttgac
+gacaacac
+acagacac
+caacacac
+agctacac
+ttaggcac
+attcgcac
+tcttgcac
+ttgaccac
+actaccac
+gtatccac
+ctcatcac
+atggtcac
+catgtcac
+tgactcac
+ccgaatac
+gaggatac
+gtccatac
+cgtcatac
+agaggtac
+cttggtac
+tcacgtac
+tacgctac
+ctgtctac
+tcggttac
+aggcttac
+cttgaagc
+tagcaagc
+tcctaagc
+atcagagc
+aatggagc
+taagcagc
+aactcagc
+aggatagc
+acagtagc
+gtactagc
+tgtctagc
+cgattagc
+atgaaggc
+tacaaggc
+gaataggc
+atatcggc
+tcaatggc
+gttatggc
+tagttggc
+atacacgc
+tgatacgc
+aagtacgc
+tatagcgc
+aacatcgc
+tggaatgc
+accaatgc
+gtagatgc
+gatcatgc
+ccatatgc
+ctaagtgc
+atgtgtgc
+tgttgtgc
+catactgc
+attgctgc
+ttctctgc
+actcttgc
+tgagaacc
+aaggaacc
+acacaacc
+catcaacc
+gactaacc
+ataggacc
+agttgacc
+tcaacacc
+cttacacc
+tcgttacc
+ctcttacc
+gataagcc
+attgagcc
+agatagcc
+ttgatgcc
+agtatgcc
+caattgcc
+ttcgatcc
+atgcatcc
+tctcatcc
+ggttatcc
+aagagtcc
+gaatgtcc
+agaactcc
+tagtctcc
+ccaattcc
+tgcattcc
+aacgttcc
+gttgttcc
+gtggaatc
+tgccaatc
+cggtaatc
+cgaagatc
+tcgagatc
+gttcgatc
+gagtgatc
+cagacatc
+agagcatc
+ttcgcatc
+ctaccatc
+gcttcatc
+cgtgtatc
+agcaagtc
+catgagtc
+tcacagtc
+aagcagtc
+ttcaggtc
+atacggtc
+tgaacgtc
+agttcgtc
+cctatgtc
+gtagtgtc
+gacttgtc
+ggtaactc
+ctagactc
+aacgactc
+tctgactc
+gcatactc
+gtaagctc
+caatgctc
+ttgtgctc
+atcacctc
+tggatctc
+tacctctc
+acggattc
+ggacattc
+gatggttc
+agtcgttc
+acctgttc
+gcaacttc
+cactcttc
+cgtggaat
+ccacgaat
+gtccgaat
+ccgacaat
+ggagcaat
+cacgcaat
+gctccaat
+gacaggat
+agtcggat
+actgcgat
+caaccgat
+gagtcgat
+cgagtgat
+gcactgat
+tggctgat
+ccgttgat
+ggcttgat
+gcgaacat
+cgcaacat
+ttgcgcat
+gatcgcat
+cagtgcat
+gtcaccat
+cgttccat
+gaggtcat
+cacctcat
+tgcggtat
+acgcgtat
+gcctgtat
+gtggctat
+ggtgaagt
+cctcaagt
+gctagagt
+tcaggagt
+aagcgagt
+tggtgagt
+gactgagt
+gtgacagt
+cgtacagt
+atcgcagt
+acgtcagt
+ctggtagt
+gagaaggt
+ctcaaggt
+caagaggt
+agacaggt
+tgctaggt
+aacacggt
+ttagcggt
+tacgtggt
+atgctggt
+gaacacgt
+ttccacgt
+gtgtacgt
+acaagcgt
+agttgcgt
+tgaaccgt
+gataccgt
+ctatccgt
+tagtccgt
+gtagtcgt
+tgtgtcgt
+tcactcgt
+accttcgt
+gacgatgt
+cggtatgt
+tcgagtgt
+gtcagtgt
+actggtgt
+caacgtgt
+gtacctgt
+agtcctgt
+gcttctgt
+ctccttgt
+agcgaact
+ggacaact
+gagagact
+ctcagact
+gttggact
+tctcgact
+acctgact
+ctagcact
+tagccact
+tgctcact
+acggtact
+gtgctact
+cggttact
+tccaagct
+acagagct
+gtctagct
+cgttagct
+tgaaggct
+cataggct
+ctatggct
+gttacgct
+aatccgct
+atgtcgct
+tcttcgct
+atcgtgct
+cagaacct
+atggacct
+tacgacct
+ctacacct
+tcgtacct
+aatggcct
+ttctgcct
+gcaatcct
+agcatcct
+caagtcct
+gctgatct
+gagcatct
+aaccgtct
+cttcgtct
+tggactct
+accactct
+tcagctct
+cgatctct
+gactctct
+cgtgttct
+ccggaatt
+agccgatt
+ggcacatt
+gccgtatt
+gctcagtt
+ctgaggtt
+accaggtt
+ggatggtt
+cactggtt
+aaggcgtt
+acaccgtt
+tgtccgtt
+cgcatgtt
+tcggtgtt
+ggtgtgtt
+gagctgtt
+gtcgactt
+cgtgactt
+gaaggctt
+tgacgctt
+acgtgctt
+ttggcctt
+cctctctt
