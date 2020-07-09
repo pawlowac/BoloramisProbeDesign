@@ -44,9 +44,9 @@ dna_mathews2004.par - place in root folder from https://github.com/ViennaRNA/Vie
 - You will need to manually change the number of threads in the script to what you want to use. Default is 4.
 - Input -> Target file created using 0_PullTargetsFromReference.py.
 	
-	- Can manually make file in fasta format with CDS name only in the header.\
+	- Can manually make file in fasta format with CDS name only in the header.
 	>YBX1\
-	AGTTCGA...\
+	AGTTCGA...
 
 - Reference input -> The reference database used. This points to both the fasta file (e.g., gencode.v29.transcripts.fa) and the bowtie2 index (gencode.v29.transcripts.fa...bt2), which is why the bowtie2 index must contain the fasta file name as the prefix. 
 - Output -> All possible probes that pass the requiurements of SplintR substrate specificity and do not contain G or C tetrapolymers, and predicted hybiridization events in the reference database. The alignments are reported in a reduced file with 6 or less mismatches. More than 6 are filtered out and assumed to not be targets for hybridization.
@@ -70,7 +70,7 @@ dna_mathews2004.par - place in root folder from https://github.com/ViennaRNA/Vie
 - Barcode Input ->  Input file barcodes.txt that contains a barcode-target pair separated by a tab. Barcodes must be 8 nt long and the entire 8 nt will be appended to the 3' 		end of the adapter sequence, and the last 4 nt will be appended to the 5' end of the adapter. This allows flexibility to sequence 8 nt in a row 5' to 3', or to sequence 	the first 4 nt from 5' to 3', then the last 4 nt in reverse order from 3' to 5' of the adapter.
 	- If you wish, you can specify the barcode to use for each target. If you do not manually add this, a random barcode will be chosen if the target does not exist in the 	barcode file. 
 	
-	- For example;/
+	- For example;
 		cggaagaa	YBX1
 
 - Outputs -> in ./probes/ dir
