@@ -20,21 +20,21 @@ dna_mathews2004.par - place in root folder from https://github.com/ViennaRNA/Vie
 **Instructions for 0_PullTargetsFromReference.py**
 - Target Input -> File with all targets, with 1 target per line. Name must be an isoform found in Gencode database.
 	
-	For example;\
-		>ENST00000321358.11|ENSG00000065978.18|OTTHUMG00000007523.6|OTTHUMT00000019786.2|YBX1-201|YBX1|1514|protein_coding|\
-		AGTTCGA...\
-		\
+	For example;
+		>ENST00000321358.11|ENSG00000065978.18|OTTHUMG00000007523.6|OTTHUMT00000019786.2|YBX1-201|YBX1|1514|protein_coding|
+		AGTTCGA
+		
 		Isoform target - YBX1-201
 		CDS - YBX1
-		\
+		
 		Therefore, if you want to target YBX1 via isoform 201, you would have YBX1-201 in your Target Input file.
 	
-	Note:\
-		Targets are pulled using string matching, so must be YBX1-201 and not Ybx1-201.\
+	Note:
+		Targets are pulled using string matching, so must be YBX1-201 and not Ybx1-201.
 		
 - Reference input -> The Gencode database for the organism you are targetting in fasta format
 	
-	For example;\
+	For example;
 		gencode.v29.transcripts.fa
 		
 - Output -> Fasta file ready for input to 1_DesignProbesAndRunOfftargetPrediction.py
@@ -45,18 +45,18 @@ dna_mathews2004.par - place in root folder from https://github.com/ViennaRNA/Vie
 - Input -> Target file created using 0_PullTargetsFromReference.py.
 	
 	- Can manually make file in fasta format with CDS name only in the header.
-	>YBX1\
+	>YBX1
 	AGTTCGA...
 
 - Reference input -> The reference database used. This points to both the fasta file (e.g., gencode.v29.transcripts.fa) and the bowtie2 index (gencode.v29.transcripts.fa...bt2), which is why the bowtie2 index must contain the fasta file name as the prefix. 
 - Output -> All possible probes that pass the requiurements of SplintR substrate specificity and do not contain G or C tetrapolymers, and predicted hybiridization events in the reference database. The alignments are reported in a reduced file with 6 or less mismatches. More than 6 are filtered out and assumed to not be targets for hybridization.
 	
-	For example;\
-		./part1/YBX1_AllProbes.fasta - All probes found\
-		./part1YBX1.sub_sam - Reduced output from bowtie2 for offtarget prediction\
+	For example;
+		./part1/YBX1_AllProbes.fasta - All probes found
+		./part1YBX1.sub_sam - Reduced output from bowtie2 for offtarget prediction
 	
-	Notes;\
-		Offtarget prediction (script 1) and probe design (script 2) are not completing in 1 step because offtarget prediction is CPU intensive and can take some time to 		complete with large number of targets. Sometimes you may find that with the default stringency (6) you may not find enough (or any) probes and therefore may wish 		to reduce stringency. In this case you can just run script 2 with different mismatch settings to find a number that works for you without recomputing the 			offtarget alignments.\
+	Notes;
+		Offtarget prediction (script 1) and probe design (script 2) are not completing in 1 step because offtarget prediction is CPU intensive and can take some time to 		complete with large number of targets. Sometimes you may find that with the default stringency (6) you may not find enough (or any) probes and therefore may wish 		to reduce stringency. In this case you can just run script 2 with different mismatch settings to find a number that works for you without recomputing the 			offtarget alignments.
 
 **Instructions for 2_AssembleProbes.py**
 - Automatically parses the files present in ./part1/ and designs probes
@@ -64,7 +64,7 @@ dna_mathews2004.par - place in root folder from https://github.com/ViennaRNA/Vie
 - Adapter input -> Input file adapters.txt that contains a target-adapter pair separated by a tab. Adapters must be 23 nt long. You use this sequence for sequencing the 		adjacent barcode, or as a landing pad for fluorescent oligos if using FISH to confirm libraries or low number of targets.
 	- All targets can have the same adapter sequencing, but it's good to start with multicolour FISH using different adapters as confirmation.
 	
-	- For example;\
+	- For example;
 		YBX1	ATAGCGATCTGCCCGGGCCTTGA
 
 - Barcode Input ->  Input file barcodes.txt that contains a barcode-target pair separated by a tab. Barcodes must be 8 nt long and the entire 8 nt will be appended to the 3' 		end of the adapter sequence, and the last 4 nt will be appended to the 5' end of the adapter. This allows flexibility to sequence 8 nt in a row 5' to 3', or to sequence 	the first 4 nt from 5' to 3', then the last 4 nt in reverse order from 3' to 5' of the adapter.
