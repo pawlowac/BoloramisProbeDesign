@@ -33,8 +33,11 @@ def main(mismatch_cutoff):
 
     try:
         barcode_file = open(initial_barcode_file, 'r')
-    except:
-        print("Please add the barcode file")
+    except (FileNotFoundError, OSError) as e:
+        raise e
+    except Exception as e:
+        print("Unexpected error:")
+        raise e
 
     # Create a folder named 'probes' within the current working directory, this
     # will be where probes are saved.
@@ -86,7 +89,7 @@ def main(mismatch_cutoff):
                 paralog_list.append(line)
             paralog_file.close()
         except FileNotFoundError:
-            print('{} has no paralogs'.format(target_name))
+            print('Warning: {} has no paralogs'.format(target_name))
 
 
         # initialize a dictionary of the probes
