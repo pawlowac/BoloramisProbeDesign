@@ -11,12 +11,10 @@ import random
 import time
 import argparse
 
+THREADS = '4'
 
 def main(target_file, reference_database):
     start_time = time.time()
-    # reference_database = './REFERENCE/gencode.v29.transcripts.fa'
-    threads = '4'
-    # target_file = 'jenny_02182020.fasta'
 
     # make sure cmdline arg filepaths exist
     try:
@@ -104,9 +102,10 @@ def main(target_file, reference_database):
                         # if any of the elifs were true, append to sub_seq_list
                         if comparison:
                             probe_name = '{}_{}-{}'.format(target_name, n, n+25)
-                            sub_seq_list.append({'Name' : probe_name,
-                                                'Sequence' : sub_seq,
-                                                'Tm' : mt.Tm_GC(sub_seq, Na=300)})
+                            sub_seq_list.append(
+                                {'Name' : probe_name,
+                                 'Sequence' : sub_seq,
+                                 'Tm' : mt.Tm_GC(sub_seq, Na=300)})
 
         temp_probe_list = open('./part1/{}_AllProbes.fasta'.format(target_name),
                                'w')
@@ -126,7 +125,7 @@ def main(target_file, reference_database):
         pruned_bowtie_results = open('./part1/{}.sub_sam'.format(target_name),
                                      'w')
         buildcmd = ['bowtie2', '--reorder', '--no-sq', '--nofw',
-                    '-p', '{}'.format(threads),
+                    '-p', '{}'.format(THREADS),
                     '-D', '20',
                     '-R', '3',
                     '-N', '1',
@@ -183,7 +182,7 @@ if __name__ == '__main__':
     parser.add_argument('-r', '--ref', nargs=1, required=True, type=str,
                         help='Location of the reference database used. This '
                              'points to both the fasta file '
-                             '(e.g., gencode.v29.transcripts.fa) and the '
+                             '(e.g. gencode.v29.transcripts.fa) and the '
                              'bowtie2 index '
                              '(gencode.v29.transcripts.fa...bt2).')
 
