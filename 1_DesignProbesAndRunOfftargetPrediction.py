@@ -46,10 +46,7 @@ def main(target_file, reference_database):
     for seq in reference_file:
         gene_name = (seq.name)
         gene_name = gene_name.split('|')[5]
-        try:
-            database_gene_list.add(gene_name)
-        except:
-            pass
+        database_gene_list.add(gene_name)
 
     for target in targets:
         if str(target.name).count('-') == 0:
@@ -64,8 +61,10 @@ def main(target_file, reference_database):
         # Good for trouble shooting if gene names are not an exact match
         # (e.g., Cd8 vs. CD8)
         if target_name not in database_gene_list:
-            print('Is this the correct reference database? Your sequence {} is '
-                  'not found in the reference.'.format(target_name))
+            raise ValueError('Sequence {} from infile is not found in the '
+                             'reference database. This should not happen '
+                             'if using the output from Script 0.'
+                             ''.format(target_name))
 
         seq = target.seq
         sub_seq_list = []
@@ -103,9 +102,9 @@ def main(target_file, reference_database):
                         if comparison:
                             probe_name = '{}_{}-{}'.format(target_name, n, n+25)
                             sub_seq_list.append(
-                                {'Name' : probe_name,
-                                 'Sequence' : sub_seq,
-                                 'Tm' : mt.Tm_GC(sub_seq, Na=300)})
+                                {'Name': probe_name,
+                                 'Sequence': sub_seq,
+                                 'Tm': mt.Tm_GC(sub_seq, Na=300)})
 
         temp_probe_list = open('./part1/{}_AllProbes.fasta'.format(target_name),
                                'w')
@@ -155,12 +154,11 @@ def main(target_file, reference_database):
                     if 'NM:i:' in detail:
                         mismatches = int(detail.replace('NM:i:',''))
                 if mismatches <= 6:
-                    try:
-                        pruned_bowtie_results.write('{}\t{}\t{}\t{}\n'
-                                ''.format(probe_name, hit_gene_name, hit_name,
-                                          mismatches))
-                    except:
-                        print('error')
+                    pruned_bowtie_results.write('{}\t{}\t{}\t{}\n'
+                                                ''.format(probe_name, 
+                                                          hit_gene_name,
+                                                          hit_name, 
+                                                          mismatches))
         pruned_bowtie_results.close()
         bowtie_output.close()
 
