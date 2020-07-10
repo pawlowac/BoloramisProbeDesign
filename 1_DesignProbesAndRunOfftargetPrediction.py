@@ -81,47 +81,28 @@ def main(target_file, reference_database):
             if GC(sub_seq) > 50 and GC(sub_seq) < 90:
                 if 'GGGG' not in sub_seq:
                     if 'CCCC' not in sub_seq:
+                        comparison = False
                         if sub_seq[7] == 'T' and sub_seq[6] == 'C':
-                            probe_name = '{}_{}-{}'.format(target_name, n, n+25)
-                            sub_seq_list.append({'Name' : probe_name,
-                                                'Sequence' : sub_seq,
-                                                'Tm' : mt.Tm_GC(sub_seq, Na=300)})
+                            comparison = True
                         elif sub_seq[7] == 'A' and sub_seq[6] == 'T':
-                            probe_name = '{}_{}-{}'.format(target_name, n, n+25)
-                            sub_seq_list.append({'Name' : probe_name,
-                                                'Sequence' : sub_seq,
-                                                'Tm' : mt.Tm_GC(sub_seq, Na=300)})
+                            comparison = True
                         elif sub_seq[7] == 'T' and sub_seq[6] == 'T':
-                            probe_name = '{}_{}-{}'.format(target_name, n, n+25)
-                            sub_seq_list.append({'Name' : probe_name,
-                                                'Sequence' : sub_seq,
-                                                'Tm' : mt.Tm_GC(sub_seq, Na=300)})
+                            comparison = True
                         elif sub_seq[7] == 'A' and sub_seq[6] == 'G':
-                            probe_name = '{}_{}-{}'.format(target_name, n, n+25)
-                            sub_seq_list.append({'Name' : probe_name,
-                                                'Sequence' : sub_seq,
-                                                'Tm' : mt.Tm_GC(sub_seq, Na=300)})
+                            comparison = True
                         elif sub_seq[7] == 'A' and sub_seq[6] == 'A':
-                            probe_name = '{}_{}-{}'.format(target_name, n, n+25)
-                            sub_seq_list.append({'Name' : probe_name,
-                                                'Sequence' : sub_seq,
-                                                'Tm' : mt.Tm_GC(sub_seq, Na=300)})
+                            comparison = True
                         elif sub_seq[7] == 'T' and sub_seq[6] == 'A':
-                            probe_name = '{}_{}-{}'.format(target_name, n, n+25)
-                            sub_seq_list.append({'Name' : probe_name,
-                                                'Sequence' : sub_seq,
-                                                'Tm' : mt.Tm_GC(sub_seq, Na=300)})
+                            comparison = True
                         elif sub_seq[7] == 'A' and sub_seq[6] == 'C':
-                            probe_name = '{}_{}-{}'.format(target_name, n, n+25)
-                            sub_seq_list.append({'Name' : probe_name,
-                                                'Sequence' : sub_seq,
-                                                'Tm' : mt.Tm_GC(sub_seq, Na=300)})
+                            comparison = True
                         elif sub_seq[7] == 'T' and sub_seq[6] == 'G':
-                            probe_name = '{}_{}-{}'.format(target_name, n, n+25)
-                            sub_seq_list.append({'Name' : probe_name,
-                                                'Sequence' : sub_seq,
-                                                'Tm' : mt.Tm_GC(sub_seq, Na=300)})
+                            comparison = True
                         elif sub_seq[7] == 'C' and sub_seq[6] == 'T':
+                            comparison = True
+
+                        # if any of the elifs were true, append to sub_seq_list
+                        if comparison:
                             probe_name = '{}_{}-{}'.format(target_name, n, n+25)
                             sub_seq_list.append({'Name' : probe_name,
                                                 'Sequence' : sub_seq,
