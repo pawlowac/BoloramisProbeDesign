@@ -9,7 +9,7 @@ import sys
 import random
 import glob
 
-def main():
+def main(mismatch_cutoff):
     #Need to specify these values.
     adapts = open('adapters.txt', 'r')
     adapt_dict = {}
@@ -22,7 +22,6 @@ def main():
 
 
     initial_barcode_file = 'barcodes.txt'
-    mismatch_cutoff = 6
     # Increasing the below number increases the number of probes available, but 
     # at the cost of probes with stronger predicted secondary structure
     # NOTE: This number is usually produced as a negative value by RNAfold, but 
@@ -326,3 +325,19 @@ def genGoodProbesItem(probe_name, probe_seq):
     d['Name'] = probe_name
     d['Sequence'] = probe_seq
     return d
+
+
+if __name__ == '__main__':
+    # set up argument parsing
+    parser = argparse.ArgumentParser()
+
+    # mismatches allowed
+    parser.add_argument("mm", metavar="MM", nargs='?', default=6, type=int,
+                        help='Number of mismatches allowed in offtarget '
+                             'alignments (default: 6).')
+
+    # parse args
+    args = parser.parse_args()
+
+    # run main script
+    main(args.mm)
