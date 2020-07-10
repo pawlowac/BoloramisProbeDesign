@@ -17,6 +17,18 @@ def main(target_file, reference_database):
     # reference_database = './REFERENCE/gencode.v29.transcripts.fa'
     threads = '4'
     # target_file = 'jenny_02182020.fasta'
+
+    # make sure cmdline arg filepaths exist
+    try:
+        if not os.path.exists(target_file):
+            raise FileNotFoundError("infile not found: {}"
+                                    "".format(target_file))
+        if not os.path.exists(reference_database):
+            raise FileNotFoundError("reference file not found: {}"
+                                    "".format(reference_database))
+    except FileNotFoundError as e:
+        raise e
+
     targets = SeqIO.parse(target_file, 'fasta')
     reference_file = SeqIO.parse('{}'.format(reference_database), 'fasta')
 
@@ -50,8 +62,8 @@ def main(target_file, reference_database):
             z = str(target.name).split('-')
             target_name = z[0] + '-' + z[1]
         print('Now predicting probes for {}'.format(target_name))
-        # Nothing happens if target not in reference, just throws a warning. 
-        # Good for trouble shooting if gene names are not an exact match 
+        # Nothing happens if target not in reference, just throws a warning.
+        # Good for trouble shooting if gene names are not an exact match
         # (e.g., Cd8 vs. CD8)
         if target_name not in database_gene_list:
             print('Is this the correct reference database? Your sequence {} is '
@@ -175,7 +187,7 @@ def main(target_file, reference_database):
     targets.close()
     reference_file.close()
 
-    print("--- %s seconds ---" % (time.time() - start_time))
+    print("--- {} seconds ---".format(time.time() - start_time))
 
 
 if __name__ == '__main__':
@@ -184,12 +196,15 @@ if __name__ == '__main__':
 
     # infile can't be imported as a file because it is opened in main() w/ SeqIO
     parser.add_argument('-i','--infile', nargs=1, required=True, type=str,
-                        help='Location of .fasta file containing a list of '
-                        'probes to be compared to the reference file.')
+                        help='Location of file created using '
+                             '0_PullTargetsFromReference.py.')
     # ref can't be imported as a file because it is opened in main() w/ SeqIO
     parser.add_argument('-r', '--ref', nargs=1, required=True, type=str,
-                        help='Location of reference .fa file to be compared '
-                             'to the infile.')
+                        help='Location of the reference database used. This '
+                             'points to both the fasta file '
+                             '(e.g., gencode.v29.transcripts.fa) and the '
+                             'bowtie2 index '
+                             '(gencode.v29.transcripts.fa...bt2).')
 
     # parse args
     args = parser.parse_args()
