@@ -1,6 +1,7 @@
 from Bio import SeqIO
 import argparse
 
+
 def main(target_file, result_file, reference_fp):
     """
         Read the target file, compare them to the reference file, and save
