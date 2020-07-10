@@ -69,7 +69,7 @@
 **Instructions for 2_AssembleProbes.py**
 
 	- Automatically parses the files present in ./part1/ and designs probes
-	- Can choose mismatches allowed in offtarget alignments using the -mm flag.
+	- Mismatches -> Can choose mismatches allowed in offtarget alignments using the -mm flag.
 	- Adapter input -> Input file adapters.txt that contains a target-adapter pair separated by a tab. Adapters must be 23 nt long. You use this sequence for sequencing the 		adjacent barcode, or as a landing pad for fluorescent oligos if using FISH to confirm libraries or low number of targets.
 		- All targets can have the same adapter sequencing, but it's good to start with multicolour FISH using different adapters as confirmation.
 
