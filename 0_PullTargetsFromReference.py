@@ -7,12 +7,15 @@ def main(target_file, result_file, reference_fp):
         Read the target file, compare them to the reference file, and save
     results in the result file.
     """
+    # make sure cmdline arg filepaths exist
+    try:
+        if not os.path.exists(reference_fp):
+            raise FileNotFoundError("No such file or directory: {}"
+                                    "".format(reference_fp))
+    except FileNotFoundError as e:
+        raise e
 
-    # result_file = open('jenny_02182020.fasta', 'w')
     reference_seqs = SeqIO.parse(reference_fp, 'fasta')
-    # reference_seqs = SeqIO.parse('./REFERENCE/gencode.v29.transcripts.fa',
-    #                              'fasta')
-    # target_file = open('jenny_02182020.txt', 'r')
 
     targets = []
     # Unpack target_file into a list
@@ -45,16 +48,20 @@ if __name__ == '__main__':
     # infile is read-only file
     parser.add_argument('-i','--infile', nargs=1, required=True,
                         type=argparse.FileType('r'),
-                        help='Location of .fasta file containing a list of '
-                        'probes to be compared to the reference file.')
+                        help='Location of file with all targets, with 1 target '
+                             'per line. Name must be an isoform found in '
+                             'Gencode database.')
     # outfile is writable file
     parser.add_argument('-o', '--outfile', nargs=1, required=True,
                         type=argparse.FileType('w'),
-                        help='Location of text file to save results.')
+                        help='Location to save the fasta file to be used for '
+                             'input to '
+                             '1_DesignProbesAndRunOfftargetPrediction.py.')
     # ref can't be imported as a file because it is opened in main() with SeqIO
     parser.add_argument('-r', '--ref', nargs=1, required=True, type=str,
-                        help='Location of reference .fa file to be compared '
-                             'to the infile.')
+                        help='Location of the file containing the Gencode '
+                             'database for the organism you are targetting in '
+                             'fasta format.')
 
     # parse args
     args = parser.parse_args()
