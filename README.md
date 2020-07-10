@@ -48,7 +48,7 @@
 **Instructions for 1_DesignProbesAndRunOfftargetPrediction.py**
 
 	- You will need to manually change the number of threads in the script to what you want to use. Default is 4.
-	- Input -> Target file created using 0_PullTargetsFromReference.py.
+	- Input -> Target file created using 0_PullTargetsFromReference.py. These are the sequences which you are creating probes to target.
 
 		- Can manually make file in fasta format with CDS name only in the header.
 		>YBX1
