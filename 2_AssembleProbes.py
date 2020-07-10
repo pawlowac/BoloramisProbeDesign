@@ -8,6 +8,7 @@ import os
 import sys
 import random
 import glob
+import argparse
 
 def main(mismatch_cutoff):
     #Need to specify these values.
@@ -19,13 +20,11 @@ def main(mismatch_cutoff):
         adapt_seq = adapt.split('\t')[1]
         adapt_dict[adapt_name] = adapt_seq
 
-
-
     initial_barcode_file = 'barcodes.txt'
-    # Increasing the below number increases the number of probes available, but 
+    # Increasing the below number increases the number of probes available, but
     # at the cost of probes with stronger predicted secondary structure
-    # NOTE: This number is usually produced as a negative value by RNAfold, but 
-    # is used as an absolute value in this script. So 7.6 in this code behaves 
+    # NOTE: This number is usually produced as a negative value by RNAfold, but
+    # is used as an absolute value in this script. So 7.6 in this code behaves
     # like -7.6 in RNAfold
     allowed_ss_score = 9.7
 
@@ -37,7 +36,7 @@ def main(mismatch_cutoff):
     except:
         print("Please add the barcode file")
 
-    # Create a folder named 'probes' within the current working directory, this 
+    # Create a folder named 'probes' within the current working directory, this
     # will be where probes are saved.
     working_dir = os.getcwd()
     if os.path.exists(os.path.dirname('./probes/')):
@@ -45,7 +44,7 @@ def main(mismatch_cutoff):
     else:
         os.makedirs(os.path.dirname('./probes/'))
 
-    # Assign barcodes. Use 'running_barcode_list.txt' to make sure barcodes are 
+    # Assign barcodes. Use 'running_barcode_list.txt' to make sure barcodes are
     # conserved between runs
     unused_barcodes = []
     used_barcodes = {}
@@ -53,7 +52,7 @@ def main(mismatch_cutoff):
         barcode = str(barcode).strip()
         if '\t' in barcode:
             code = barcode.split('\t')
-            # barcodes are used in lower case for easier visualizing of final 
+            # barcodes are used in lower case for easier visualizing of final
             # probes
             used_barcodes[code[1]] = code[0].lower()
         else:
@@ -126,17 +125,17 @@ def main(mismatch_cutoff):
         for bowtie_probe in bowtie_results_dict.keys():
             comparison = False
             if len(bowtie_results_dict[bowtie_probe]) == 0:
-                post_bowtie_list.append(genPostBowtieItem(bowtie_probe, 
-                                                          bowtie_probe, 
-                										  probe_dict))
+                post_bowtie_list.append(genPostBowtieItem(bowtie_probe,
+                                                          bowtie_probe,
+                                                          probe_dict))
                 # post_bowtie_list.append({'Name' : bowtie_probe,
                 #                         'Tm' : bowtie_probe.split('_')[2],
                 #                         'Sequence' : probe_dict[bowtie_probe]})
             elif len(bowtie_results_dict[bowtie_probe]) == 1:
-                if (bowtie_probe.split('_')[0] == 
+                if (bowtie_probe.split('_')[0] ==
                         bowtie_results_dict[bowtie_probe][0]):
-                    post_bowtie_list.append(genPostBowtieItem(bowtie_probe, 
-                                                              bowtie_probe, 
+                    post_bowtie_list.append(genPostBowtieItem(bowtie_probe,
+                                                              bowtie_probe,
                                                               probe_dict))
                     # post_bowtie_list.append({'Name' : bowtie_probe,
                     #                         'Tm' : bowtie_probe.split('_')[2],
@@ -156,8 +155,8 @@ def main(mismatch_cutoff):
                         # breaks out of loop if non-paralog found
                         break
                 if score == required_score:
-                    post_bowtie_list.append(genPostBowtieItem(probe_name, 
-                                                              bowtie_probe, 
+                    post_bowtie_list.append(genPostBowtieItem(probe_name,
+                                                              bowtie_probe,
                                                               probe_dict))
                     # post_bowtie_list.append({'Name' : probe_name,
                     #                         'Tm' : bowtie_probe.split('_')[2],
@@ -176,7 +175,7 @@ def main(mismatch_cutoff):
             f_arm = a['Sequence'][7:]
             t_arm = a['Sequence'][:7]
             final_sequence = "{}{}{}{}{}".format(f_arm, target_barcode[4:],
-                                                 adapter_seq, target_barcode, 
+                                                 adapter_seq, target_barcode,
                                                  t_arm)
             post_bowtie_results.write('>{}_{}off\n{}\n'.format(name,
                                                                mismatch_cutoff,
@@ -196,7 +195,7 @@ def main(mismatch_cutoff):
                                          target_barcode))
         else:
             try:
-                # remove RNAfold outfile because it automatically appends 
+                # remove RNAfold outfile because it automatically appends
                 # results and does not overwright.
                 os.remove('tmp1.rna_out')
             except FileNotFoundError:
@@ -208,7 +207,7 @@ def main(mismatch_cutoff):
                         '--outfile=tmp1.rna_out']
             subprocess.call(buildcmd)
 
-            # remove unused ps_files that RNAfold produced even with ps files 
+            # remove unused ps_files that RNAfold produced even with ps files
             # are suppressed
             ps_files = glob.glob('*.ps')
             for a in ps_files:
@@ -236,12 +235,12 @@ def main(mismatch_cutoff):
                                             'Result' : data})
 
             # Sort probes with least secondary structure to most.
-            sorted_probes = sorted(ss_results_list, 
-                                   key=lambda k: k['Result'], 
+            sorted_probes = sorted(ss_results_list,
+                                   key=lambda k: k['Result'],
                                    reverse=False)
             # post_RNAfold_results = open('./probes/{}_{}off_PostRNAfold.fasta'.format(target_name, mismatch_cutoff), 'w')
             # make sure there is no probe overlap
-            # Use position_list to store all base positions that are already covered 
+            # Use position_list to store all base positions that are already covered
             # by a probe
             position_list = []
             good_probes = []
@@ -263,7 +262,7 @@ def main(mismatch_cutoff):
                     position_list.extend(range(start,end))
                     good_probes.append(genGoodProbesItem(probe_name, probe_seq))
                 else:
-                    if ((position - 2 not in position_list) 
+                    if ((position - 2 not in position_list)
                             and (position + 27 not in position_list)):
                         start = position - 2
 
@@ -277,7 +276,7 @@ def main(mismatch_cutoff):
                     else:
                         pass
 
-            # Save entire probe and only the template binding region seperately 
+            # Save entire probe and only the template binding region seperately
             # for each analysis.
             final_results = open('./probes/{}_{}off_FinalProbes.fasta'
                                  ''.format(target_name, mismatch_cutoff), 'w')
@@ -286,15 +285,15 @@ def main(mismatch_cutoff):
 
             for item in good_probes:
                 target_sequence = item['Sequence'][53:] + item['Sequence'][:18]
-                final_results.write('>{}\n/5phos/{}\n'.format(item['Name'], 
+                final_results.write('>{}\n/5phos/{}\n'.format(item['Name'],
                                                               item['Sequence']))
-                final_results2.write('>{}\n{}\n'.format(item['Name'], 
+                final_results2.write('>{}\n{}\n'.format(item['Name'],
                                                         target_sequence))
 
-            print('number of good probes for {}\t{}'.format(target_name, 
+            print('number of good probes for {}\t{}'.format(target_name,
                                                             len(good_probes)))
-            summary_file.write('{}\t{}\t{}\n'.format(target_name, 
-                                                     len(good_probes), 
+            summary_file.write('{}\t{}\t{}\n'.format(target_name,
+                                                     len(good_probes),
                                                      target_barcode))
             # post_RNAfold_results.close()
             final_results.close()
