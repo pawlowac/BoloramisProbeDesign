@@ -1,3 +1,10 @@
+0_PullTargetsFromReference.py
+
+'-in' should point to target_file
+'-out' should point to result_file
+'-ref' should point to reference_seqs
+
+
 1_DesignProbesAndRunOfftargetPrediction.py
 
 Want to manually chose input files.
@@ -5,12 +12,7 @@ Want to manually chose input files.
 '-in' should provide the file used in target_file
 '-ref' should provide the file used in reference_database
 
+
 2_AssembleProbes.py
 
 '-mm' should provide value used in mismatch_cutoff
-
-0_PullTargetsFromReference.py
-
-'-out' should point to result_file
-'-ref' should point to reference_seqs
-'-in' should point to target_file
