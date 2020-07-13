@@ -1,5 +1,6 @@
 from Bio import SeqIO
 import argparse
+import os
 
 
 def main(target_file, result_file, reference_fp):
@@ -70,5 +71,6 @@ if __name__ == '__main__':
     main(args.infile[0], args.outfile[0], args.ref[0])
 
     # close imported files
-    infile.close()
-    outfile.close()
+    args.infile[0].close()
+    args.outfile[0].close()
+

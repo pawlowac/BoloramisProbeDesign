@@ -186,8 +186,7 @@ def main(mismatch_cutoff):
         post_bowtie_results.close()
 
         # Use RNAfold to predict secondary structure
-        RNAfold_infile = './probes/{}_{}off_PostBowtie.fasta'
-                         ''.format(target_name, mismatch_cutoff)
+        RNAfold_infile = './probes/{}_{}off_PostBowtie.fasta'.format(target_name, mismatch_cutoff)
 
         # If no probes passed bowtie2 analysis, don't bother going through
         # RNAfold analysis. This actually throws an error if file is empty
