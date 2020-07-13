@@ -73,4 +73,3 @@ if __name__ == '__main__':
     # close imported files
     args.infile[0].close()
     args.outfile[0].close()
-
