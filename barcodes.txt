@@ -93,6 +93,16 @@ agcgtgta	IL6
 tcgactag	IL1B
 ctgcagat	SST
 taacgacc	NIPAL4
+ctagactc	CXCL8
+gtgacagt	DHCR24
+taggagag	DPYSL5
+caacacac	HDLBP
+atctacgg	HMGA1
+cgattcag	NKX2-6
+caatgctc	NPM1
+gtggctat	PPP1R17
+ttggcaag	SPARC
+atcggtca	YBX1
 accatgga
 cttctgga
 ccattgga
@@ -167,7 +177,6 @@ atcctcca
 cacttcca
 gcgaatca
 cgcaatca
-atcggtca
 catggtca
 tcctgtca
 gtcactca
@@ -222,7 +231,6 @@ tcctgaag
 cgaacaag
 gagacaag
 accacaag
-ttggcaag
 agtgcaag
 tcaccaag
 catccaag
@@ -231,7 +239,6 @@ ccagtaag
 ggactaag
 ctcctaag
 gcgttaag
-taggagag
 gttgagag
 ttccagag
 aggtagag
@@ -256,7 +263,6 @@ gattccag
 tacgtcag
 actgtcag
 aagctcag
-cgattcag
 ggcaatag
 cgagatag
 accgatag
@@ -292,7 +298,6 @@ tgcttagg
 tagaacgg
 aatgacgg
 caatacgg
-atctacgg
 ttatgcgg
 attaccgg
 agaatcgg
@@ -428,7 +433,6 @@ gtgttgac
 accttgac
 gacaacac
 acagacac
-caacacac
 agctacac
 ttaggcac
 attcgcac
@@ -541,12 +545,10 @@ cctatgtc
 gtagtgtc
 gacttgtc
 ggtaactc
-ctagactc
 aacgactc
 tctgactc
 gcatactc
 gtaagctc
-caatgctc
 ttgtgctc
 atcacctc
 tggatctc
@@ -587,7 +589,6 @@ cacctcat
 tgcggtat
 acgcgtat
 gcctgtat
-gtggctat
 ggtgaagt
 cctcaagt
 gctagagt
@@ -595,7 +596,6 @@ tcaggagt
 aagcgagt
 tggtgagt
 gactgagt
-gtgacagt
 cgtacagt
 atcgcagt
 acgtcagt
