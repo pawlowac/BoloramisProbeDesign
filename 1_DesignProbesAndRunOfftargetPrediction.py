@@ -155,9 +155,9 @@ def main(target_file, reference_database):
 						mismatches = int(detail.replace('NM:i:',''))
 				if mismatches <= 6:
 					pruned_bowtie_results.write('{}\t{}\t{}\t{}\n'
-												''.format(probe_name, 
+												''.format(probe_name,
 														  hit_gene_name,
-														  hit_name, 
+														  hit_name,
 														  mismatches))
 		pruned_bowtie_results.close()
 		bowtie_output.close()
