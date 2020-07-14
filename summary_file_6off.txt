@@ -1,3 +1,0 @@
-DHCR24	28	gtgacagt
-DPYSL5	44	taggagag
-YBX1	2	atcggtca

@@ -1,4 +1,10 @@
+################ Project Specific Gitignore ##################
 gencode.v29.transcripts.f*
+*.fasta
+*.rna_out
+summary_file_*off.txt
+*.sam
+*.ps
 
 
 ################ Python Gitignore ##################
