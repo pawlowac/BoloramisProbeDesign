@@ -4,7 +4,10 @@
 	Barcoded Oligonucleotides Ligated On RNA Amplified for Multiplexed and parallel In-Situ analysis (BOLORAMIS) is a reverse-transcription (RT)-free method for spatially-resolved,
 	targeted, in situ RNA identification of single or multiple targets
 
+**Installation**
 
+git clone https://github.com/pawlowac/BoloramisProbeDesign
+Follow instructions below and make sure the dependencies are installed.
 
 **Dependencies**
 
