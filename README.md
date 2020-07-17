@@ -97,7 +97,7 @@ Note:
 
 **Citation**
 
-	All errors are the fault of Andrew Pawlowski.
+	By Andrew Pawlowski.
 	Contact: Andrew_Pawlowski@hms.harvard.edu
 	David Kalish helped make these scripts more user friendly.
 
