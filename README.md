@@ -1,4 +1,3 @@
-<pre>
 **Purpose**
 
 	Barcoded Oligonucleotides Ligated On RNA Amplified for Multiplexed and parallel In-Situ analysis (BOLORAMIS) is a reverse-transcription (RT)-free method for spatially-resolved,
@@ -103,6 +102,3 @@ Note:
 	By Andrew Pawlowski.
 	Contact: Andrew_Pawlowski@hms.harvard.edu
 	David Kalish helped make these scripts more user friendly.
-
-<Add citation>
-</pre>
