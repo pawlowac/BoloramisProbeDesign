@@ -98,6 +98,6 @@ Note:
 
 ## Citation
 
-By Andrew Pawlowski.
-Contact: Andrew_Pawlowski@hms.harvard.edu
-David Kalish helped make these scripts more user friendly.
+By Andrew Pawlowski.<br/>
+Contact: Andrew_Pawlowski@hms.harvard.edu<br/>
+David Kalish helped make these scripts more user friendly.<br/>
