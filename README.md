@@ -1,28 +1,27 @@
-**Purpose**
+# Probe Design Software for BOLORAMIS
+Barcoded Oligonucleotides Ligated On RNA Amplified for Multiplexed and parallel In-Situ analysis (BOLORAMIS) is a reverse-transcription (RT)-free method for spatially-resolved,targeted, in situ RNA identification of single or multiple targets.
 
-	Barcoded Oligonucleotides Ligated On RNA Amplified for Multiplexed and parallel In-Situ analysis (BOLORAMIS) is a reverse-transcription (RT)-free method for spatially-resolved,
-	targeted, in situ RNA identification of single or multiple targets
-
-**Installation**
-
+## Installation
+```
 git clone https://github.com/pawlowac/BoloramisProbeDesign
+```
 Follow instructions below and make sure the dependencies are installed.
 
-**Dependencies**
+## Dependencies
 
-	-python3.7.6
-		- biopython v1.76
-	-bowtie2 v2.3.4.3 (in PATH)
-	-RNAfold 2.4.11 (in PATH)
-	-dna_mathews2004.par - place in root folder from https://github.com/ViennaRNA/ViennaRNA/tree/master/misc
+	- python3.7.6
+	- biopython v1.76
+	- bowtie2 v2.3.4.3 (in PATH)
+	- RNAfold 2.4.11 (in PATH)
+	- dna_mathews2004.par - place in root folder from https://github.com/ViennaRNA/ViennaRNA/tree/master/misc
 
-**Instructions**
+## Instructions
 - Index reference with bowtie2-build. Place the fasta file and index in the REFRENCE dir. Make sure to use the entire reference name (e.g., gencode.v29.transcripts.fa and not gencode.v29.transcripts for the bt2_index_base).
 - Run script 0, 1, and 2
 
 
 
-**Instructions for 0_PullTargetsFromReference.py**
+### Instructions for 0_PullTargetsFromReference.py
 
 	- Target Input (-i, --infile) -> File with all targets, with 1 target per line. Name must be an isoform found in Gencode database.
 
@@ -47,7 +46,7 @@ Follow instructions below and make sure the dependencies are installed.
 
 
 
-**Instructions for 1_DesignProbesAndRunOfftargetPrediction.py**
+### Instructions for 1_DesignProbesAndRunOfftargetPrediction.py
 
 	- You will need to manually change the number of threads in the script to what you want to use. Default is 4.
 	- Input (-i, --infile) -> Target file created using 0_PullTargetsFromReference.py. These are the sequences for which you are creating probes to target.
@@ -68,7 +67,7 @@ Follow instructions below and make sure the dependencies are installed.
 
 
 
-**Instructions for 2_AssembleProbes.py**
+### Instructions for 2_AssembleProbes.py
 
 	- Automatically parses the files present in ./part1/ and designs probes
 	- Mismatches (default: 6, otherwise positional argument for mismatches <6) -> Can choose mismatches allowed in offtarget alignments.
@@ -97,8 +96,8 @@ Follow instructions below and make sure the dependencies are installed.
 Note:
 	In some cases it may be desirable to ignore mismatches to a non-target. E.g., if you want to target ACTB and don't care about off target hybridization to ACTG. In this case, create a folder called 'paralogs' and place within it a file with the name of the CDS target followed uby '_paralogs.txt'. Place the paralog CDS names on per line. If a paralog file is found, any offtargets detected by script 2 will be ignored for the CDS name in the paralog file. 
 
-**Citation**
+## Citation
 
-	By Andrew Pawlowski.
-	Contact: Andrew_Pawlowski@hms.harvard.edu
-	David Kalish helped make these scripts more user friendly.
+By Andrew Pawlowski.<br/>
+Contact: Andrew_Pawlowski@hms.harvard.edu<br/>
+David Kalish helped make these scripts more user friendly.<br/>
