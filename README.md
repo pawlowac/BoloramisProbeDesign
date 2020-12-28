@@ -16,6 +16,8 @@ Follow instructions below and make sure the dependencies are installed.
 	- dna_mathews2004.par - place in root folder from https://github.com/ViennaRNA/ViennaRNA/tree/master/misc
 
 ## Instructions
+We have included a folder with [Demo Files](https://github.com/pawlowac/BoloramisProbeDesign/tree/master/BOLORAMIS_DEMO) and [Instructions](https://github.com/pawlowac/BoloramisProbeDesign/blob/master/BOLORAMIS_DEMO/InstructionsForDemo.txt).
+
 - Index reference with bowtie2-build. Place the fasta file and index in the REFRENCE dir. Make sure to use the entire reference name (e.g., gencode.v29.transcripts.fa and not gencode.v29.transcripts for the bt2_index_base).
 - Run script 0, 1, and 2
 
@@ -63,7 +65,7 @@ Follow instructions below and make sure the dependencies are installed.
 			./part1YBX1.sub_sam - Reduced output from bowtie2 for offtarget prediction
 
 		Notes;
-			Offtarget prediction (script 1) and probe design (script 2) are not completing in 1 step because offtarget prediction is CPU intensive and can take some time to 		complete with large number of targets. Sometimes you may find that with the default stringency (6) you may not find enough (or any) probes and therefore may wish 		to reduce stringency. In this case you can just run script 2 with different mismatch settings to find a number that works for you without recomputing the 			offtarget alignments.
+			Offtarget prediction (script 1) and probe design (script 2) are not completing in 1 step because offtarget prediction is CPU intensive and can take some time to complete with large number of targets. Sometimes you may find that with the default stringency (6) you may not find enough (or any) probes and therefore may wish to reduce stringency. In this case you can just run script 2 with different mismatch settings to find a number that works for you without recomputing the offtarget alignments.
 
 
 
@@ -71,14 +73,14 @@ Follow instructions below and make sure the dependencies are installed.
 
 	- Automatically parses the files present in ./part1/ and designs probes
 	- Mismatches (default: 6, otherwise positional argument for mismatches <6) -> Can choose mismatches allowed in offtarget alignments.
-	- Adapter input -> Input file adapters.txt that contains a target-adapter pair separated by a tab. Adapters must be 23 nt long. You use this sequence for sequencing the 		adjacent barcode, or as a landing pad for fluorescent oligos if using FISH to confirm libraries or low number of targets.
+	- Adapter input -> Input file adapters.txt that contains a target-adapter pair separated by a tab. Adapters must be 23 nt long. You use this sequence for sequencing the adjacent barcode, or as a landing pad for fluorescent oligos if using FISH to confirm libraries or low number of targets.
 		- All targets can have the same adapter sequencing, but it's good to start with multicolour FISH using different adapters as confirmation.
 
 		- For example;
 			YBX1	ATAGCGATCTGCCCGGGCCTTGA
 
-	- Barcode Input ->Input file barcodes.txt that contains a barcode-target pair separated by a tab. Barcodes must be 8 nt long and the entire 8 nt will be appended to the 3' 		end of the adapter sequence, and the last 4 nt will be appended to the 5' end of the adapter. This allows flexibility to sequence 8 nt in a row 5' to 3', or to sequence 	the first 4 nt from 5' to 3', then the last 4 nt in reverse order from 3' to 5' of the adapter.
-		- If you wish, you can specify the barcode to use for each target. If you do not manually add this, a random barcode will be chosen if the target does not exist in the 	barcode file.
+	- Barcode Input ->Input file barcodes.txt that contains a barcode-target pair separated by a tab. Barcodes must be 8 nt long and the entire 8 nt will be appended to the 3' end of the adapter sequence, and the last 4 nt will be appended to the 5' end of the adapter. This allows flexibility to sequence 8 nt in a row 5' to 3', or to sequence the first 4 nt from 5' to 3', then the last 4 nt in reverse order from 3' to 5' of the adapter.
+		- If you wish, you can specify the barcode to use for each target. If you do not manually add this, a random barcode will be chosen if the target does not exist in the barcode file.
 
 		- For example;
 			cggaagaa	YBX1
@@ -87,7 +89,7 @@ Follow instructions below and make sure the dependencies are installed.
 
 		1. *_#off_PostBowtie.fasta - Used by RNAfold to predict secondary structure
 		2. *_#off_FinalTargets.fasta - The entire hybridization sequence without probe structure
-		3. *_#off_FinalProbes.fasta - Pick e.g., top 10 and synthesize. You may synthesize with a 5' phosphate or add it with T4 PNK. Either way works, but SplintR requires 		this 5' phosphate.
+		3. *_#off_FinalProbes.fasta - Pick e.g., top 10 and synthesize. You may synthesize with a 5' phosphate or add it with T4 PNK. Either way works, but SplintR requires this 5' phosphate.
 
 	- Summary output - A summary file with barcode identity and number of probes found as summary_file_#off.txt in the root dir
 
