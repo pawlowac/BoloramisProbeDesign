@@ -1,0 +1,18 @@
+This is a demo using real targets in our experiment, with step by step instructions on using these scripts.
+To start, please copy-paste the files in "BOLORAMIS_DEMO" into the root dir
+
+1. Download "gencode.v29.transcripts.fa" from Gencode
+2. Index genome using Bowtie2
+	COMMAND: bowtie2-build --threads 4 gencode.v29.transcripts.fa gencode.v29.transcripts.fa 
+3. Copy-paste those files into a folder names "REFERENCE" along with "gencode.v29.transcripts.fa"
+4. File "BoloramisDemoTargets.txt" contains the transcript ID of the targets, one per line. The following command extracts the fasta sequences of the targets in this file.
+	COMMAND: python3 0_PullTargetsFromReference.py -i BoloramisDemoTargets.txt -o BoloramisDemoTargets.fasta -r ./REFERENCE/gencode.v29.transcripts.fa
+	where -o is the output of the transcript sequences in fasta format and -r is the reference database.
+5. We now want to predict all possible probes while minimizing offtarget hybridization using bowtie2.
+	COMMAND: python3 1_DesignProbesAndRunOfftargetPrediction.py -i BoloramisDemoTargets.fasta -r ./REFERENCE/gencode.v29.transcripts.fa
+	Output is automatically placed in the 'part1' folder.
+6. Now, let's attach barcodes. adapters, and make sure none of the probes overlap.
+	COMMAND: python3 2_AssembleProbes.py
+	All Probes are automatically output to the 'probes' folder. The important files have '_FinalProbes.fasta' appended to the end. The other files are intermediate files that may be important to you. The 'FinalTargets.fasta' appended files has the site of probe hydridizations, and the '_PostBowtie.fasta'-appended files are all probes that passed the bowtie step, but not ranked by secondary structure or checked for 2+ probes hybridizing to an overlapping site.
+	E.g., ADAM7_6off_FinalTargets.fasta and ADAMTS1_6off_FinalProbes.fasta hold your results.
+	To quickly summarize your results, look at the summary_file_6off.txt. This file lists all targets and the number of probes designed for each.
