@@ -16,7 +16,7 @@ Follow instructions below and make sure the dependencies are installed.
 	- dna_mathews2004.par - place in root folder from https://github.com/ViennaRNA/ViennaRNA/tree/master/misc
 
 ## Instructions
-We have included a folder with [Demo Files](https://github.com/pawlowac/BoloramisProbeDesign/tree/master/BOLORAMIS_DEMO) and [Instructions](https://github.com/pawlowac/BoloramisProbeDesign/blob/master/BOLORAMIS_DEMO/InstructionsForDemo.txt).
+We have included a folder with [Demo Files](https://github.com/pawlowac/BoloramisProbeDesign/tree/master/BOLORAMIS_DEMO) and [Instructions](https://github.com/pawlowac/BoloramisProbeDesign/blob/master/BOLORAMIS_DEMO/InstructionsForDemo.txt) for running the scripts.
 
 - Index reference with bowtie2-build. Place the fasta file and index in the REFRENCE dir. Make sure to use the entire reference name (e.g., gencode.v29.transcripts.fa and not gencode.v29.transcripts for the bt2_index_base).
 - Run script 0, 1, and 2
