@@ -1,108 +1,108 @@
-cggaagaa	bpT9-x
-gccaagaa	bpTNF-x
-ggagagaa	bpPOLR2A-x
-acggagaa	smF-MALAT1-x
-cacgagaa	smF-XIST-x
-ccacagaa	bp-GAPDH-x
-gagcagaa	bp-TFRC-x
-agccagaa	hsa-miR-137
-tcgaggaa	hsa-miR-375
-ctcaggaa	hsa-miR-449a
-ggtaggaa	hsa-miR-219a-1-3p
-tgacggaa	hsa-miR-219a-2-3p
-atgcggaa	hsa-miR-149-5p
-catcggaa	hsa-miR-324-5p
-gcatggaa	hsa-miR-125a-5p
-gtgacgaa	hsa-miR-335-5p
-tgcacgaa	hsa-miR-24-3p
-cctacgaa	hsa-miR-362-3p
-tcagcgaa	hsa-miR-331-3p
-atcgcgaa	hsa-miR-16-5p
-gatgcgaa	CASP1
-cgatcgaa	hsa-miR-423-5p
-ctggtgaa	hsa-miR-99b-5p
-gtcctgaa	hsa-miR-27b-5p
-gtggacaa	hsa-miR-30c-1-3p
-tgcgacaa	hsa-miR-30c-2-3p
-cctgacaa	hsa-miR-30b-5p
-tcgcacaa	hsa-miR-129-1-3p
-ctccacaa	hsa-miR-129-2-3p
-ggtcacaa	hsa-miR-590-5p
-cgaagcaa	hsa-miR-340-5p
-gagagcaa	hsa-miR-26a-5p
-accagcaa	hsa-miR-148a-3p
-agtggcaa	hsa-miR-101-3p
-gtacgcaa	hsa-miR-29a-3p
-taccgcaa	hsa-miR-183-5p
-tggtgcaa	hsa-miR-21-5p
-gcaaccaa	hsa-miR-125b-5p
-aggaccaa	hsa-miR-191-5p
-cacaccaa	hsa-miR-96-5p
-ctagccaa	TNF
-taggccaa	hsa-miR-30a-5p
-tcctccaa	hsa-miR-218-5p
-ccgatcaa	hsa-miR-302a-3p
-ggcatcaa	hsa-miR-302b-3p
-ccaggtaa	hsa-miR-302c-3p
-gacggtaa	hsa-miR-302d-3p
-gctcgtaa	hsa-miR-367-3p
-cgctgtaa	hsa-miR-372-3p
-cgtgctaa	hsa-miR-373-3p
-ggacctaa	hsa-miR-515-5p
-cagcctaa	hsa-miR-200c-3p
-gcgtctaa	hsa-miR-217
-cgagaaga	hsa-miR-371a-3p
-gaggaaga	hsa-miR-371b-3p
-accgaaga	hsa-miR-520g-3p
-gcacaaga	hsa-miR-517a-3p
-aggcaaga	hsa-miR-9-5p
-caccaaga	hsa-miR-885-5p
-ccgtaaga	hsa-miR-219b-3p
-ggctaaga	hsa-miR-551b-3p
-ggaagaga	hsa-miR-301b-3p
-cagagaga	hsa-miR-151a-3p
-tccagaga	hsa-miR-151b
-tgtggaga	hsa-miR-345-5p
-ctacgaga	hsa-miR-15a-5p
-gatcgaga	hsa-miR-128-3p
-gtgtgaga	hsa-miR-25-3p
-ccaacaga	hsa-miR-301a-3p
-tggacaga	hsa-miR-598-3p
-gacacaga	hsa-miR-34a-5p
-gtagcaga	hsa-miR-484
-catgcaga	hsa-miR-107
-actccaga	hsa-miR-374b-5p
-ctctcaga	hsa-miR-103a-3p
-gcgataga	hsa-miR-106b-3p
-cgcataga	hsa-miR-342-5p
-ttggagga	hsa-miR-1246
-agtgagga	hsa-miR-93-5p
-tctcagga	hsa-miR-221-5p
-agaacgga	hsa-miR-135a-5p
-taaccgga	hsa-miR-205-5p
-aagtcgga	hsa-miR-92b-3p
-tgttcgga	hsa-miR-135b-5p
-cgtagaca	CALB1
-gaagtgga	GAD1
-acgaacga	GFAP
-gtcaacga	MBP
-cgtaacga	CD8a
-tcagacga	EGFP
-acagcaca	REST
-agcgtgta	IL6
-tcgactag	IL1B
-ctgcagat	SST
-taacgacc	NIPAL4
-ctagactc	CXCL8
-gtgacagt	DHCR24
-taggagag	DPYSL5
-caacacac	HDLBP
-atctacgg	HMGA1
-cgattcag	NKX2-6
-caatgctc	NPM1
-gtggctat	PPP1R17
-ttggcaag	SPARC
-atcggtca	YBX1
+cggaagaa
+gccaagaa
+ggagagaa
+acggagaa
+cacgagaa
+ccacagaa
+gagcagaa
+agccagaa
+tcgaggaa
+ctcaggaa
+ggtaggaa
+tgacggaa
+atgcggaa
+catcggaa
+gcatggaa
+gtgacgaa
+tgcacgaa
+cctacgaa
+tcagcgaa
+atcgcgaa
+gatgcgaa
+cgatcgaa
+ctggtgaa
+gtcctgaa
+gtggacaa
+tgcgacaa
+cctgacaa
+tcgcacaa
+ctccacaa
+ggtcacaa
+cgaagcaa
+gagagcaa
+accagcaa
+agtggcaa
+gtacgcaa
+taccgcaa
+tggtgcaa
+gcaaccaa
+aggaccaa
+cacaccaa
+ctagccaa
+taggccaa
+tcctccaa
+ccgatcaa
+ggcatcaa
+ccaggtaa
+gacggtaa
+gctcgtaa
+cgctgtaa
+cgtgctaa
+ggacctaa
+cagcctaa
+gcgtctaa
+cgagaaga
+gaggaaga
+accgaaga
+gcacaaga
+aggcaaga
+caccaaga
+ccgtaaga
+ggctaaga
+ggaagaga
+cagagaga
+tccagaga
+tgtggaga
+ctacgaga
+gatcgaga
+gtgtgaga
+ccaacaga
+tggacaga
+gacacaga
+gtagcaga
+catgcaga
+actccaga
+ctctcaga
+gcgataga
+cgcataga
+ttggagga
+agtgagga
+tctcagga
+agaacgga
+taaccgga
+aagtcgga
+tgttcgga
+cgtagaca
+gaagtgga
+acgaacga
+gtcaacga
+cgtaacga
+tcagacga
+acagcaca
+agcgtgta
+tcgactag
+ctgcagat
+taacgacc
+ctagactc
+gtgacagt
+taggagag
+caacacac
+atctacgg
+cgattcag
+caatgctc
+gtggctat
+ttggcaag
+atcggtca
 accatgga
 cttctgga
 ccattgga
